@@ -1,2 +1,2 @@
 # linkedtree
-This project creates the linked lists and trees using python language.
+This project implements basic datastructure in python
