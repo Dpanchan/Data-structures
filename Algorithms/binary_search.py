@@ -12,6 +12,9 @@ def binary_search(arr, target):
       high = mid - 1
   return -1
    
+# def binary_search(arr, i):
+#   return arr.index(i) if i in arr else -1
+
 d = [-3, -2, -1, 0, 1, 1, 2, 3, 4, 5, 6, 10]
 
 test_cases = (-3, -2, -1, 0, 1, 3, 4, 7, 9, 10) 
