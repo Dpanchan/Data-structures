@@ -54,4 +54,33 @@ public class BinSearch {
 	
 	}
 }
+-------------------------------------------------------------------------
+
+def bs_helper(a, key, low, high):
+  while low <= high:
+    mid = (low + high) // 2 
+    if a[mid] == key:
+      return mid
+    elif a[mid] < key:
+      low = mid+1
+    else:
+      high = mid-1
+  return -1
+
+def bin_search(a,key):
+  low, high = 0, len(a)-1
+  index = bs_helper(a, key, low, high)
+  while index != -1:
+    # print(index)
+    prev = index
+    index = bs_helper(a, key, low, prev-1)
+  return prev
+
+
+
+#    0 1 2 3 4 5 6 7 8 9 10 11 12
+a = [1] + [7] * 100000 + [8]
+key = 7
+k = bin_search(a, key)
+print(k)
 
